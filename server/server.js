@@ -13,7 +13,7 @@ const server = http.createServer(app);
 initSocket(server);
 
 app.use(cookieParser());
-app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true }));
+app.use(cors({ credentials: true }));
 // images are sent as base64 data URLs in JSON, so allow a larger body
 app.use(express.json({ limit: "15mb" }));
 app.use(express.urlencoded({ extended: true, limit: "15mb" }));
