@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --color-ink: #0e0c1d;
+}
+
+html, body, #root { height: 100%; }
+body { @apply bg-ink text-white antialiased font-sans; }
+
+/* slim, unobtrusive scrollbars */
+* { scrollbar-width: thin; scrollbar-color: rgb(255 255 255 / .15) transparent; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
